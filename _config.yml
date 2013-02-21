@@ -3,3 +3,7 @@ description: TK
 author: TK
 analytics: UAXXXXXXXX1
 exclude: [ _design, README ]
+auto: true
+markdown: rdiscount
+permalink: caralho/:year/:month/:day/:title
+rdiscount extensions: [smart]

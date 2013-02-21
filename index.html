@@ -3,4 +3,14 @@ layout: default
 title: TK
 ---
 
-TK
+<div class="content">
+  <div class="related">
+    <ul>
+      {% for posts in site.posts %}
+      <li>
+  <span></span> <a href="{{ posts.url }}">{{ posts.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
