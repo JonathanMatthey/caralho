@@ -1,9 +1,37 @@
 ---
-layout: post
+layout: default
 title: Volcom Brain Damage
 rollover_img: nike-store-rollover.jpg
 ---
 
-This is a test post writen in markdown. To learn more about markdown check out the [documentation](http://daringfireball.net/projects/markdown/) on [Daring Fireball](http://daringfireball.net/).
+<div class="project-page">
 
-<img class="project-img" src="http://www.thequietfront.com/static/510e844de4b0837c157cabb1/51163b45e4b016fd37c1494c/51163b59e4b016fd37c1ec8d/1328561287007/Heidi_Klum-Rankin-08.jpg/1000w"/>
+<div class="project-details clearfix">
+
+  <h1>Lebron James: Raven</h1>
+  <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
+  <div class="project-meta">
+    <b>Client:</b> --<br/>
+    <b>Agency:</b> --<br/>
+    <b>My Role:</b> Art Direction<br/>
+  </div>
+  <div class="social-btns">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="Augusto_Paiva">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <br/>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+  </div>
+
+  <p class="more">A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
+
+  <a class="read-more" href="#">Read More</a>
+</div>
+
+<img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />
+<img class="project-img" src="http://fashnberry.com/wp-content/uploads/2012/12/joan-vogue-japan-5.jpg" />
+<img class="project-img" src="http://i.pinger.pl/pgr438/5eb933820028c73e4aed8bb4/heidi-klum-nude-chocolate-heidilicious-rankin-04.jpg" />
+<img class="project-img" src="http://karlismyunkle.files.wordpress.com/2011/08/tom-hardy-karlismyunkle.jpeg" />
+<img class="project-img" src="http://multiplefashiondisorder.files.wordpress.com/2010/11/rosie-huntington-whiteley-by-rankin-ten-times-rosie-13.jpg" />
+<img class="project-img" src="http://rankin.co.uk/media/5289-291-009_f5_CROP1.jpg" />
+
+</div>
