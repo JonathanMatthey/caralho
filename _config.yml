@@ -1,6 +1,6 @@
-name: TK
-description: TK
-author: TK
+name: Augusto Paiva
+description: Portfolio of Augusto Paiva
+author: Augusto Paiva
 analytics: UAXXXXXXXX1
 exclude: [ _design, README ]
 auto: true

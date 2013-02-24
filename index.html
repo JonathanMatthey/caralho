@@ -2,13 +2,31 @@
 layout: default
 title: TK
 ---
+<div class="about-page">
 
+<p>Interview by Computer Arts UK Magazine:</p>
+
+<p>Art director and designer Augusto Paiva has already enjoyed a sparkling design career and boasts
+a string of huge clients in his portfolio, including Nike, Adidas, Honda, MTV and Microsoft. It’s not surprising, considering the breadth of his qualifications, which include a degree in advertising from Brazil as well as a degree in graphic design from Australia. He’s now based in New York, where he spends his time working on projects for Nike at digital advertising agency R/GA and skateboarding around his Brooklyn neighbourhood.</p>
+
+<p>Paiva’s work is heavily influenced by communication: "I’m inspired by things that provide people with the opportunity to interact," he explains. "I like to infuse my designs with a vibrancy that draws people in and makes them want to know more."</p>
+
+<p>He takes a fresh and bold approach, covering all disciplines from film-style frames to heavy digital platforms. "I like to take an ordinary subject, and develop a new and unique way to look at it,".</p>
+
+<p>"I guess my approach is often bold and not safe."</p>
+
+
+<p class="strong">Available for select worldwide projects.</p>
+
+<div class="connect-links"><a href="#">Linkedin</a>  ’  <a href="#">Twitter</a>  ’  <a href="#">Email</a></div>
+
+</div>
 <div class="content">
-  <div class="related">
-    <ul>
+  <div class="project-list-wrapper">
+    <ul class="project-list">
       {% for posts in site.posts %}
       <li>
-  <span></span> <a href="{{ posts.url }}">{{ posts.title }}</a>
+        <a href="{{ posts.url }}">{{ posts.title }}</a>
       </li>
       {% endfor %}
     </ul>
