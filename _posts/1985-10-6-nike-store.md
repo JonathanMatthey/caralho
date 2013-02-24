@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Volcom
-rollover_img: volcom-rollover.jpg
+title: Nike Store
+rollover_img: nike-store-rollover.jpg
 ---
 
 This is a test post writen in markdown. To learn more about markdown check out the [documentation](http://daringfireball.net/projects/markdown/) on [Daring Fireball](http://daringfireball.net/).
-
-<img src="http://newsfut.files.wordpress.com/2010/10/mane20garrincha.jpg"/>

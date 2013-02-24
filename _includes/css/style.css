@@ -163,6 +163,8 @@ footer{
   height:150px;
   width:100%;
   background-color:black;
+  position: absolute;
+  bottom: 0;
 }
 
 footer .copyright{
@@ -207,10 +209,108 @@ footer .connect .connect-links a{
   margin-right:5px;
 }
 
+
+.project-list{
+  padding-top:160px;
+}
+
+.project-list li{
+  width:630px;
+  float:left;
+}
+
 .project-list a{
   font-size:60px;
 }
 
+.project-page{
+  text-align: center;
+}
+.project-img{
+}
+
+.project-details{
+  background-color:white;
+  width:100%;
+  text-align: left;
+
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.project-page h1{
+  font-size:60px;
+  color:black;
+  padding-top:70px;
+  margin-left:50px;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+.project-details p{
+  font-size:13px;
+  color:black;
+  margin-left:50px;
+  font-family: helvetica;
+  font-weight: normal;
+  width:460px;
+  float:left;
+}
+
+.project-details .project-meta{
+float: left;
+width: 190px;
+color: black;
+font-family: helvetica;
+margin-left: 60px;
+margin-top: 12px;
+font-size: 13px;
+}
+
+.project-details .social-btns{
+  width:150px;
+  float:left;
+}
+
+.project-page .read-more{
+  color: black;
+  clear:both;
+  float:left;
+  font-weight: bold;
+  margin-left:50px;
+font-family: helvetica;
+  margin-bottom:50px;
+  text-decoration: underline;
+}
+
+.project-page .read-more:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.project-details p.more{
+display: none;
+clear:both;
+}
+.project-details.expanded p.more{
+  display: block;
+}
+
+.project-rollover-img{
+  position: absolute;
+  top: -500px;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.project-list a:hover .project-rollover-img{
+  position: absolute;
+  top: 200px;
+}
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }

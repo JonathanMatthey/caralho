@@ -22,13 +22,21 @@ a string of huge clients in his portfolio, including Nike, Adidas, Honda, MTV an
 
 </div>
 <div class="content">
-  <div class="project-list-wrapper">
+  <div class="project-list-wrapper clearfix">
     <ul class="project-list">
       {% for posts in site.posts %}
       <li>
-        <a href="{{ posts.url }}">{{ posts.title }}</a>
+        <a href="{{ posts.url }}">{{ posts.title }}
+        <img class="project-rollover-img" src="img/{{ posts.rollover_img }}"/>
+        </a>
       </li>
       {% endfor %}
     </ul>
   </div>
+</div>
+
+<div class="project-page">
+
+  
+
 </div>
