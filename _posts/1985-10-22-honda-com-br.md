@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Honda.com.br
-rollover_img: honda-com-br-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

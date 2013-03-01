@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Skol.com.br
-rollover_img: nike-store-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

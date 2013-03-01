@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nike Snowboarding
-rollover_img: nike-store-rollover.jpg
+rollover_img: snowboot.png
 ---
 
 <div class="project-page">

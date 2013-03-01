@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Leica iPad App
-rollover_img: leica-ipad-app-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

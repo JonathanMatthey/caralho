@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Lebron James Raven
-rollover_img: nike-store-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

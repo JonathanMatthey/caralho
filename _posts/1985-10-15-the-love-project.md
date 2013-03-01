@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Love Project
-rollover_img: nike-store-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

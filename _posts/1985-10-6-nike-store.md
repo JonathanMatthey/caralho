@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nike Store
-rollover_img: nike-store-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">

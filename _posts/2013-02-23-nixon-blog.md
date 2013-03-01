@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nixon Blog
-rollover_img: nike-store-rollover.jpg
+rollover_img: 
 ---
 
 <div class="project-page">
