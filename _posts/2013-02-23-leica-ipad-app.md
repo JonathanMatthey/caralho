@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Leica iPad App
 rollover_img: 
 ---

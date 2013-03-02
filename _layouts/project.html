@@ -1,10 +1,82 @@
----
-layout: layout
----
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<div class="content">
-  <div id="post">
-    <h1>{{ project.title }}</h1>
-    {{ content }}
-  </div>
-</div>
+  <title>{{ page.title }} | {{ site.name }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="/all.css">
+
+  <script src="/js/modernizr-2.0.6.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container" class="project-page-container">
+    <header>
+      <h1><a href="/">InteractiveWhatever</a></h1>
+      <div id="plus-menu">
+        <div id="plus-icon"></div>
+        <a href="#" class="all-work">All work</a>
+        <a href="#" class="about">About</a>
+      </div>
+    </header>
+    <div id="main" role="main">
+
+      {{ content }}
+
+    </div>
+
+    <div class="project-nav">
+        <div class="project-link-label">Next project</div>
+        <a class="next-project-link" href="/{{ page.next.url }}"> {{ page.next.title }}</a>
+        <div class="project-link-label">Previous project</div>
+        <a class="prev-project-link" href="/{{ page.previous.url }}"> {{ page.previous.title }}</a>
+    </div>
+
+    <footer>
+      <div class="copyright">
+        <div class="logo">Interactive Whatever</div>
+        <p>The content and the images of this website are the propriety of Augusto Paiva. <br/>
+If you wish to use any of the content, please get in touch. © Interactive Whatever.</p>
+      </div>
+      <div class="connect">
+        <h3>Connect</h3>
+        <div class="connect-links"><a href="#">Linkedin</a>  ’  <a href="#">Twitter</a>  ’  <a href="#">Email</a></div>
+      </div>
+    </footer>
+  </div> <!--! end of #container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
+  <script defer src="/all.js"></script>
+  <script>
+    window._gaq = [['_setAccount','{{ site.analytics }}'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=156084011210606";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

@@ -2,8 +2,10 @@ name: Augusto Paiva
 description: Portfolio of Augusto Paiva
 author: Augusto Paiva
 analytics: UAXXXXXXXX1
-exclude: [ _design, README ]
+exclude: [ '_design', 'README.markdown', 'README_FOR_COLLABORATORS.markdown', 'Gemfile.lock', 'Gemfile']
 auto: true
 markdown: rdiscount
 permalink: caralho/:year/:month/:day/:title
 rdiscount extensions: [smart]
+production: false
+paginate: 20

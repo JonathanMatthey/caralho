@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Skol.com.br
 rollover_img: 
 ---
@@ -34,4 +34,13 @@ rollover_img:
 <img class="project-img" src="http://multiplefashiondisorder.files.wordpress.com/2010/11/rosie-huntington-whiteley-by-rankin-ten-times-rosie-13.jpg" />
 <img class="project-img" src="http://rankin.co.uk/media/5289-291-009_f5_CROP1.jpg" />
 
+</div>
+
+<div class="project-nav">
+  <div class="next-project-wrapper">
+    <div class="next-project-label">Next project</div>
+    <a class="next-project-link" href="#"> {{ page.next.url }}</a>
+    <div class="prev-project-label">Previous project</div>
+    <a class="prev-project-link" href="#"> {{ page.previous.url }}</a>
+  </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Volcom Brain Damage
 rollover_img: 
 ---
@@ -8,7 +8,7 @@ rollover_img:
 
 <div class="project-details clearfix">
 
-  <h1>Lebron James: Raven</h1>
+  <h1>Volcom Brain Damage</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
   <div class="project-meta">
     <b>Client:</b> --<br/>
@@ -27,11 +27,8 @@ rollover_img:
   <a class="read-more" href="#">Read More</a>
 </div>
 
-<img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />
-<img class="project-img" src="http://fashnberry.com/wp-content/uploads/2012/12/joan-vogue-japan-5.jpg" />
-<img class="project-img" src="http://i.pinger.pl/pgr438/5eb933820028c73e4aed8bb4/heidi-klum-nude-chocolate-heidilicious-rankin-04.jpg" />
-<img class="project-img" src="http://karlismyunkle.files.wordpress.com/2011/08/tom-hardy-karlismyunkle.jpeg" />
-<img class="project-img" src="http://multiplefashiondisorder.files.wordpress.com/2010/11/rosie-huntington-whiteley-by-rankin-ten-times-rosie-13.jpg" />
-<img class="project-img" src="http://rankin.co.uk/media/5289-291-009_f5_CROP1.jpg" />
+<img class="project-img" src="http://upload.wikimedia.org/wikipedia/commons/1/1a/Edgar_Degas_-_Dance_Class.jpg" />
+<img class="project-img" src="http://upload.wikimedia.org/wikipedia/commons/5/5d/Edgar_Germain_Hilaire_Degas_005.jpg" />
+<img class="project-img" src="http://daen.theamk.com/art/Degas/degas.4-dancers.jpg" />
 
 </div>

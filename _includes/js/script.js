@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  var scrolledToBottom = false;
+
   // $("a#about").click(function(evt){
   //   evt.preventDefault();
   //   $(".about-page").addClass('slide-in');
@@ -35,8 +37,29 @@ $(document).ready(function(){
 
   $(".project-details .read-more").click(function(evt){
     evt.preventDefault();
-    $(".project-details").addClass('expanded');
+    if ($(".project-details.expanded").length == 0 ){
+      $(".project-details").addClass('expanded');
+    }
   });
 
+  var windowHeight = $(window).height();
+  var docHeight = $(document).height();
+
+  $(document).scroll(function() {
+    windowHeight = $(window).height();
+    docHeight = $(document).height();
+    if ( !scrolledToBottom ){
+      docScrollTop = $(document).scrollTop();
+      console.log(docScrollTop);
+      console.log(docHeight);
+      console.log(windowHeight);
+      if (docScrollTop > docHeight - windowHeight - 700 ) {
+        $('html, body').animate({
+            scrollTop: docHeight
+         }, 500);
+         scrolledToBottom = true;
+      }
+    }
+  });
 
 });

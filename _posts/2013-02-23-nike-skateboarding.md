@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Nike Skateboarding
 rollover_img: 
 ---

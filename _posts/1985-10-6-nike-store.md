@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: project
 title: Nike Store
+post_id: nike-store
 rollover_img: 
 ---
 

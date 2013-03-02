@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Honda.com.br
 rollover_img: 
 ---

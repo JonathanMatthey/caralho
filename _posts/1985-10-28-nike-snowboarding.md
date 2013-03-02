@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: project
 title: Nike Snowboarding
+post_id: nike-snowboarding
 rollover_img: snowboot.png
 ---
 
@@ -8,7 +9,7 @@ rollover_img: snowboot.png
 
 <div class="project-details clearfix">
 
-  <h1>Lebron James: Raven</h1>
+  <h1>Nike Snowboarding</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
   <div class="project-meta">
     <b>Client:</b> --<br/>
@@ -27,6 +28,8 @@ rollover_img: snowboot.png
   <a class="read-more" href="#">Read More</a>
 </div>
 
+<img class="project-img" src="http://2.bp.blogspot.com/-1jn7Q2LzlZc/T_N_pRx5DvI/AAAAAAAAzjg/6UfQxY7e6_w/s1600/Conversazione+di+San+Paolo+1600-01++-+Caravaggio++by+Catherine+La+Rose.jpg" />
+<img class="project-img" src="http://upload.wikimedia.org/wikipedia/commons/0/03/Supper_at_Emmaus-Caravaggio_(1606).jpg" />
 <img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />
 <img class="project-img" src="http://fashnberry.com/wp-content/uploads/2012/12/joan-vogue-japan-5.jpg" />
 <img class="project-img" src="http://i.pinger.pl/pgr438/5eb933820028c73e4aed8bb4/heidi-klum-nude-chocolate-heidilicious-rankin-04.jpg" />

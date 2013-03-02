@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Nixon Blog
 rollover_img: 
 ---
