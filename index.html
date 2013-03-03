@@ -23,16 +23,33 @@ a string of huge clients in his portfolio, including Nike, Adidas, Honda, MTV an
 </div>
 <div class="content">
   <div class="project-list-wrapper clearfix">
-    <ul class="project-list clearfix">
+    <!-- not DRY ... but the best i can do to create 2 cols with liquid templates -->
+    <ul class="project-list clearfix left-col">
       {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}
-          <div class="project-rollover-wrapper">
-            <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-            <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-          </div>
-        </a>
-      </li>
+        {% if {{forloop.index}} < 8 %}
+          <li class="">
+            <a href="{{ post.url }}">{{ post.title }}
+              <div class="project-rollover-wrapper">
+                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
+                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
+              </div>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="project-list clearfix right-col">
+      {% for post in site.posts %}
+        {% if {{forloop.index}} > 7 %}
+          <li class="">
+            <a href="{{ post.url }}">{{ post.title }}
+              <div class="project-rollover-wrapper">
+                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
+                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
+              </div>
+            </a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

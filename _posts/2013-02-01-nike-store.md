@@ -1,12 +1,22 @@
 ---
 layout: project
-title: Nike.com
+title: Nike Store
+post_id: nike-store
 rollover_img: 
 ---
 
 <div class="project-page">
 
 <div class="project-details clearfix">
+
+  <div class="project-index-wrapper">
+    <div class="project-index">
+      08
+    </div>
+    <div class="project-total-count">
+      /12 {{ site.total_posts}}
+    </div>
+  </div>
 
   <h1>Lebron James: Raven</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>

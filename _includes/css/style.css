@@ -88,6 +88,47 @@ header h1{
   float:left;
 }
 
+header .social-bar{
+  background-color: #31b984;
+  height: 20px;
+  color: black;
+  font-weight: bold;
+  top: 70px;
+  position: absolute;
+  width: 100%;
+  padding: 10px 0;
+  font-family: helvetica, sans-serif;
+  color:#202b1d;
+  font-size:12px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms linear;
+  -moz-transition: opacity 300ms linear;
+  -o-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
+  overflow: hidden;
+}
+
+header .social-bar.show{
+  opacity: 1;
+
+}
+
+header .social-bar div.text{
+  line-height: 20px;
+  margin-left:45px;
+  width:210px;
+  float:left;
+}
+
+header .fb_iframe_widget > span{
+  height:23px !important;
+  width:80px !important;
+}
+
+header .twitter-share-button{
+  width:80px!important;
+}
+
 a{
   text-decoration: none;
   font-size: 25px;
@@ -209,9 +250,10 @@ ul{
 footer{
   height:150px;
   width:100%;
-  background-color:black;
+  background-color:#000;
   position: absolute;
   bottom: 0;
+  z-index: 99;
 }
 
 footer .copyright{
@@ -258,11 +300,17 @@ footer .connect .connect-links a{
 
 .project-list{
   padding-top:125px;
+  width:630px;
+  float:left;
 }
 
 .project-list li{
   width:630px;
   float:left;
+}
+
+.project-list li.right{
+  float:right;
 }
 
 .project-list a{
@@ -291,18 +339,21 @@ footer .connect .connect-links a{
   transition: all 200ms ease-out;
 }
 
-.project-page h1{
+.project-page .project-details h1{
   font-size:60px;
-  color:black;
+  color:#1c1c1c;
   padding-top:70px;
   margin-left:50px;
   padding-bottom:0;
   margin-bottom:0;
+  width:50%;
 }
+
+
 
 .project-details p{
   font-size:13px;
-  color:black;
+  color:#1c1c1c;
   margin-left:50px;
   font-family: helvetica;
   font-weight: normal;
@@ -313,7 +364,7 @@ footer .connect .connect-links a{
 .project-details .project-meta{
   float: left;
   width: 190px;
-  color: black;
+  color: #1c1c1c;
   font-family: helvetica;
   margin-left: 60px;
   margin-top: 12px;
@@ -326,8 +377,9 @@ footer .connect .connect-links a{
   float:left;
 }
 
+
 .project-page .read-more{
-  color: black;
+  color: #1c1c1c;
   clear:both;
   float:left;
   font-weight: bold;
@@ -361,10 +413,13 @@ footer .connect .connect-links a{
 }
 
 .project-rollover-wrapper{
-  display: none;
   position: absolute;
-  top:-50px;
-  left:500px;
+  top:-1000px;
+  left:70px;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 .project-rollover-img{
@@ -374,6 +429,7 @@ footer .connect .connect-links a{
   -moz-transition: all 300ms ease-out;
   -o-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
+  -webkit-transform: scaleX(0.8)  scaleY(0.8);
 }
 .project-rollover-img:nth-child(2){
   position: absolute;
@@ -385,21 +441,21 @@ footer .connect .connect-links a{
   -webkit-transform: scaleX(-1);
 }
 .project-list a:hover .project-rollover-wrapper{
-  display: block;
+  top:-50px;
 }
 
 .project-list a:hover .project-rollover-img{
   position: absolute;
   opacity: 1;
-  -webkit-animation: hangRotation 3s linear 0s infinite alternate none;
+  /*-webkit-animation: hangRotation 3s linear 0s infinite alternate none;*/
   z-index: 5;
   top:0px;
 }
 
 .project-list a:hover .project-rollover-img:nth-child(2){
   position: absolute;
-  -webkit-transform: scaleX(-0.7)  scaleY(0.7);
-  -webkit-animation: hangRotation2 4s linear 0.2s infinite alternate none;
+  -webkit-transform: scaleX(-0.6)  scaleY(0.6);
+  /*-webkit-animation: hangRotation2 4s linear 0.2s infinite alternate none;*/
   opacity: 1;
   z-index: 4;
   left: 180px;
@@ -407,15 +463,15 @@ footer .connect .connect-links a{
 }
 
 @-webkit-keyframes hangRotation {
-  0% { left: 0px; animation-timing-function: linear; -webkit-transform: rotate(0deg);}
-  50% { left: 3px; animation-timing-function: linear; -webkit-transform: rotate(-1deg);}
-  100% { left: 0px; animation-timing-function: linear; -webkit-transform: rotate(0deg);}
+  0% { left: 0px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(0.8)  scaleY(0.8);}
+  50% { left: 3px; animation-timing-function: linear; -webkit-transform: rotate(-1deg) scaleX(0.8)  scaleY(0.8);}
+  100% { left: 0px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(0.8)  scaleY(0.8);}
 }
 
 @-webkit-keyframes hangRotation2 {
-  0% { left: 180px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(-0.7)  scaleY(0.7);}
-  80% { left: 178px; animation-timing-function: linear; -webkit-transform: rotate(1deg) scaleX(-0.7) scaleY(0.7);}
-  100% { left: 180px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(-0.7) scaleY(0.7);}
+  0% { left: 180px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(-0.6)  scaleY(0.6);}
+  80% { left: 168px; animation-timing-function: linear; -webkit-transform: rotate(1deg) scaleX(-0.6) scaleY(0.6);}
+  100% { left: 180px; animation-timing-function: linear; -webkit-transform: rotate(0deg) scaleX(-0.6) scaleY(0.6);}
 }
 
 @-webkit-keyframes slidein {
@@ -429,6 +485,23 @@ footer .connect .connect-links a{
     width: 100%;
   }
 }
+
+.project-index-wrapper{
+  font-family:"Adobe Calson Pro";
+  font-size:70px;
+  color: #1c1c1c;
+  font-weight: bold;
+  position: absolute;
+  top:90px;
+  right:40px;
+}
+
+.project-index-wrapper div{
+  clear:both;
+  float:right;
+  margin: 15px 0;
+}
+
 /* == PROJECT PAGE ======================================== */
 
 #container.project-page-container footer{
@@ -454,6 +527,88 @@ footer .connect .connect-links a{
   padding-bottom:150px;
 }
 
+.project-index-wrapper{
+}
+
+@-webkit-keyframes fadeOut /* Safari and Chrome */
+{
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.project-index {
+  width:70px;
+  height:90px;
+}
+
+.project-index > div{
+  position: absolute;
+  background-color:white;
+  -webkit-animation: fadeOut 10ms linear 50ms 1 normal forwards ;
+  -webkit-animation-play-state: paused;
+}
+
+
+.project-index > div.pi01{
+  z-index: 30;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 50ms;
+}
+.project-index > div.pi02{
+  z-index: 29;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 250ms;
+}
+.project-index > div.pi03{
+  z-index: 28;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 450ms;
+}
+.project-index > div.pi04{
+  z-index: 27;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 650ms;
+}
+.project-index > div.pi05{
+  z-index: 26;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 850ms;
+}
+.project-index > div.pi06{
+  z-index: 25;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 1050ms;
+}
+.project-index > div.pi07{
+  z-index: 24;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 1250ms;
+}
+.project-index > div.pi08{
+  z-index: 23;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 1450ms;
+}
+.project-index > div.pi09{
+  z-index: 22;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 1650ms;
+}
+.project-index > div.pi10{
+  z-index: 21;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 1850ms;
+}
+.project-index > div.pi11{
+  z-index: 20;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 50ms;
+}
+.project-index > div.pi12{
+  z-index: 19;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 50ms;
+}
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }

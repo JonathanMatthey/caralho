@@ -53,13 +53,30 @@ $(document).ready(function(){
       console.log(docScrollTop);
       console.log(docHeight);
       console.log(windowHeight);
-      if (docScrollTop > docHeight - windowHeight - 700 ) {
+      if( docScrollTop > 200 && !$(".social-bar").hasClass('show')){
+        $(".social-bar").addClass('show');
+      }
+      else if (docScrollTop > docHeight - windowHeight - 700 ) {
         $('html, body').animate({
             scrollTop: docHeight
          }, 500);
          scrolledToBottom = true;
       }
     }
+  });
+
+  windowWidth = 1024;
+
+  $(".project-list a").mousemove(function(evt){
+    var currentPosX = evt.pageX;
+    var currentPosY = evt.pageY;
+    if(currentPosX < windowWidth/2){
+
+    } else {
+
+    }
+    $(evt.currentTarget).find('.project-rollover-wrapper > img').first().css("left", 1*(currentPosX/windowWidth)*30+15+"px");
+    $(evt.currentTarget).find('.project-rollover-wrapper > img').last().css("left", -1*(currentPosX/windowWidth)*30+155+"px");
   });
 
 });

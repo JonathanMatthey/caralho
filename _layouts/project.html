@@ -12,9 +12,9 @@
   <meta name="author" content="{{ site.author }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="/caralho/all.css">
+  <link rel="stylesheet" href="/all.css">
 
-  <script src="/caralho/js/modernizr-2.0.6.min.js"></script>
+  <script src="/js/modernizr-2.0.6.min.js"></script>
 </head>
 
 <body>
@@ -24,9 +24,18 @@
       <h1><a href="/">InteractiveWhatever</a></h1>
       <div id="plus-menu">
         <div id="plus-icon"></div>
-        <a href="#" class="all-work">All work</a>
-        <a href="#" class="about">About</a>
+        <a href="/" class="all-work">All work</a>
+        <a href="/#/about" class="about">About</a>
       </div>
+      <div class="social-bar">
+        <div class='text'>Share this project with your friends: </div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="Augusto_Paiva">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+    <a data-pin-config="beside" href="//pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" ><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+      </div>
+
     </header>
     <div id="main" role="main">
 
@@ -56,7 +65,8 @@ If you wish to use any of the content, please get in touch. © Interactive Whate
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/jquery-1.6.2.min.js"><\/script>')</script>
-  <script defer src="/caralho/all.js"></script>
+  <script defer src="/all.js"></script>
+  <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
   <script>
     window._gaq = [['_setAccount','{{ site.analytics }}'],['_trackPageview'],['_trackPageLoadTime']];
     Modernizr.load({

@@ -1,12 +1,21 @@
 ---
 layout: project
-title: Lebron James Raven
+title: The Love Project
 rollover_img: 
 ---
 
 <div class="project-page">
 
 <div class="project-details clearfix">
+
+  <div class="project-index-wrapper">
+    <div class="project-index">
+      03
+    </div>
+    <div class="project-total-count">
+      /12 {{ site.total_posts}}
+    </div>
+  </div>
 
   <h1>Lebron James: Raven</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
@@ -27,9 +36,11 @@ rollover_img:
   <a class="read-more" href="#">Read More</a>
 </div>
 
-<img class="project-img" src="http://allart.biz/up/photos/album/B-C/Caravaggio/michelangelo_caravaggio_20_the_crowning_with_thorns_1607l.jpg" />
-<img class="project-img" src="http://fc03.deviantart.net/fs45/f/2009/114/3/b/copy_from_caravaggio_by_mertyavasca.jpg" />
-<img class="project-img" src="http://0.tqn.com/d/arthistory/1/0/v/6/1/07-Caravaggio-Martha-and-Mary-Magdalene-1598.jpg" />
-<img class="project-img" src="http://0.tqn.com/d/arthistory/1/0/8/x/mmc_scuderie_quirinale_06.jpg" />
+<img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />
+<img class="project-img" src="http://fashnberry.com/wp-content/uploads/2012/12/joan-vogue-japan-5.jpg" />
+<img class="project-img" src="http://i.pinger.pl/pgr438/5eb933820028c73e4aed8bb4/heidi-klum-nude-chocolate-heidilicious-rankin-04.jpg" />
+<img class="project-img" src="http://karlismyunkle.files.wordpress.com/2011/08/tom-hardy-karlismyunkle.jpeg" />
+<img class="project-img" src="http://multiplefashiondisorder.files.wordpress.com/2010/11/rosie-huntington-whiteley-by-rankin-ten-times-rosie-13.jpg" />
+<img class="project-img" src="http://rankin.co.uk/media/5289-291-009_f5_CROP1.jpg" />
 
 </div>

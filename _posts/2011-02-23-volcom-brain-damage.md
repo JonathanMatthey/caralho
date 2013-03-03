@@ -8,6 +8,15 @@ rollover_img:
 
 <div class="project-details clearfix">
 
+  <div class="project-index-wrapper">
+    <div class="project-index">
+      09
+    </div>
+    <div class="project-total-count">
+      /12 {{ site.total_posts}}
+    </div>
+  </div>
+
   <h1>Volcom Brain Damage</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
   <div class="project-meta">
