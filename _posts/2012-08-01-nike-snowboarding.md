@@ -47,11 +47,6 @@ rollover_img: snowboot.png
 
 </div>
 
-<img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />
-<img class="project-img" src="http://fashnberry.com/wp-content/uploads/2012/12/joan-vogue-japan-5.jpg" />
-<img class="project-img" src="http://i.pinger.pl/pgr438/5eb933820028c73e4aed8bb4/heidi-klum-nude-chocolate-heidilicious-rankin-04.jpg" />
-<img class="project-img" src="http://karlismyunkle.files.wordpress.com/2011/08/tom-hardy-karlismyunkle.jpeg" />
-<img class="project-img" src="http://multiplefashiondisorder.files.wordpress.com/2010/11/rosie-huntington-whiteley-by-rankin-ten-times-rosie-13.jpg" />
-<img class="project-img" src="http://rankin.co.uk/media/5289-291-009_f5_CROP1.jpg" />
+<img class="project-img" src="/img/lebron1.jpg" />
 
 </div>

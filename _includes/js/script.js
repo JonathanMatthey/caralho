@@ -53,7 +53,10 @@ $(document).ready(function(){
       console.log(docScrollTop);
       console.log(docHeight);
       console.log(windowHeight);
-      if( docScrollTop > 200 && !$(".social-bar").hasClass('show')){
+      if( docScrollTop < 600 && $(".social-bar").hasClass('show')){
+        $(".social-bar").removeClass('show');
+      }
+      else if( docScrollTop > 600 && !$(".social-bar").hasClass('show')){
         $(".social-bar").addClass('show');
       }
       else if (docScrollTop > docHeight - windowHeight - 700 ) {
