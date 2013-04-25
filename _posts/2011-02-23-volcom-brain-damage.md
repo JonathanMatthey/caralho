@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Volcom Brain Damage
-rollover_img: 
+post_id: volcom-brain-damage
+rollover_count: 3
 ---
 
 <div class="project-page">

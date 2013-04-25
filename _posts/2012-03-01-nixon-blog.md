@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Nixon Blog
-rollover_img: 
+post_id: nixon-blog
+rollover_count: 1
 ---
 
 <div class="project-page">

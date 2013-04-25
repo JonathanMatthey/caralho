@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Lebron James Raven
-rollover_img: 
+post_id: lebron-james-raven
+rollover_count: 6
 ---
 
 <div class="project-page">

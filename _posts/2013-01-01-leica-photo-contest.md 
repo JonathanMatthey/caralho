@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Leica Photo Contest
-rollover_img: 
+post_id: leica-photo-contest
+rollover_count: 2
 ---
 
 <div class="project-page">

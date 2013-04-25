@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Skol.com.br
-rollover_img: 
+post_id: skol-com-br
+rollover_count: 7
 ---
 
 <div class="project-page">

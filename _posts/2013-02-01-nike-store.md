@@ -1,8 +1,8 @@
 ---
-layout: project
+layout: project2
 title: Nike Store
 post_id: nike-store
-rollover_img: 
+rollover_count: 4
 ---
 
 <div class="project-page">

@@ -1,8 +1,11 @@
 ---
-layout: project
+layout: project2
 title: Nike Skateboarding
-rollover_img: 
+post_id: nike-skateboarding
+rollover_count: 1
 ---
+
+
 
 <div class="project-page">
 
@@ -18,7 +21,7 @@ rollover_img:
   </div>
 
   <h1>Lebron James: Raven</h1>
-  <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
+  <p class="project-p">A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
   <div class="project-meta">
     <b>Client:</b> --<br/>
     <b>Agency:</b> --<br/>
@@ -34,6 +37,8 @@ rollover_img:
   <p class="more">A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
 
   <a class="read-more" href="#">Read More</a>
+  <a class="read-less" href="#">Read Less</a>
+
 </div>
 
 <img class="project-img" src="http://3.bp.blogspot.com/_NQzhCQOB-xk/SvTXqhOq8sI/AAAAAAAAAtI/ZAJbEPK9fVU/s1600/HeidiKlum@RankinsHeidilicious%5E49327---justfreepics-dot-org.jpg" />

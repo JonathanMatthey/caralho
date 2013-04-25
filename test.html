@@ -1,0 +1,182 @@
+<html>
+<head>
+  <style>
+    ul li{
+      font-size:3em;
+    }
+    ul li:hover{
+      color:red;
+    }
+    ul{
+      z-index: 10;
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: 10;
+
+    }
+    .rollover-imgs > img{
+      position: absolute;
+      top:0;
+      left:0;
+      /*opacity: 0;*/
+      opacity: 1;
+      z-index: 0;
+    }
+    .rollover-imgs .fadeIn{
+      opacity: 1;
+    }
+
+  </style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>
+    $("document").ready(function(){
+
+      $("ul li").mouseenter(function(evt){
+        console.log($(evt.currentTarget));
+        $(".rollover-imgs ." + $(evt.currentTarget).attr('class')).show();
+      });
+      
+      $("ul li").mouseleave(function(evt){
+        console.log($(evt.currentTarget));
+        $(".rollover-imgs img").hide();
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+
+  <ul>
+    <li class="nike-com">
+      option 1
+    </li>
+    <li class="nike-store">
+      option 1
+    </li>
+    <li class="leica-photo-contest">
+      option 1
+    </li>
+    <li>
+      option 1
+    </li>
+    <li>
+      option 1
+    </li>
+    <li>
+      option 1
+    </li>
+    <li>
+      option 1
+    </li>
+  </ul>
+
+<div class="rollover-imgs">
+      
+          <img class="nike-com 1" src="img/rollover-cutouts/nike-com/1.png">
+      
+          <img class="nike-com 2" src="img/rollover-cutouts/nike-com/2.png">
+        
+          <img class="nike-com 3" src="img/rollover-cutouts/nike-com/3.png">
+        
+          <img class="nike-com 4" src="img/rollover-cutouts/nike-com/4.png">
+        
+          <img class="nike-com 5" src="img/rollover-cutouts/nike-com/5.png">
+        
+          <img class="nike-store 1" src="img/rollover-cutouts/nike-store/1.png">
+        
+          <img class="nike-store 2" src="img/rollover-cutouts/nike-store/2.png">
+        
+          <img class="nike-store 3" src="img/rollover-cutouts/nike-store/3.png">
+        
+          <img class="nike-store 4" src="img/rollover-cutouts/nike-store/4.png">
+        
+          <img class="leica-photo-contest 1" src="img/rollover-cutouts/leica-photo-contest/1.png">
+        
+          <img class="leica-photo-contest 2" src="img/rollover-cutouts/leica-photo-contest/2.png">
+        
+          <img class="the-love-project 1" src="img/rollover-cutouts/the-love-project/1.png">
+        
+          <img class="the-love-project 2" src="img/rollover-cutouts/the-love-project/2.png">
+        
+          <img class="the-love-project 3" src="img/rollover-cutouts/the-love-project/3.png">
+        
+          <img class="the-love-project 4" src="img/rollover-cutouts/the-love-project/4.png">
+        
+          <img class="the-love-project 5" src="img/rollover-cutouts/the-love-project/5.png">
+        
+          <img class="honda-access 1" src="img/rollover-cutouts/honda-access/1.png">
+        
+          <img class="honda-access 2" src="img/rollover-cutouts/honda-access/2.png">
+        
+          <img class="honda-access 3" src="img/rollover-cutouts/honda-access/3.png">
+        
+          <img class="honda-com-br 1" src="img/rollover-cutouts/honda-com-br/1.png">
+        
+          <img class="honda-com-br 2" src="img/rollover-cutouts/honda-com-br/2.png">
+        
+          <img class="honda-com-br 3" src="img/rollover-cutouts/honda-com-br/3.png">
+        
+          <img class="honda-com-br 4" src="img/rollover-cutouts/honda-com-br/4.png">
+        
+          <img class="volcom-com 1" src="img/rollover-cutouts/volcom-com/1.png">
+        
+          <img class="volcom-com 2" src="img/rollover-cutouts/volcom-com/2.png">
+        
+          <img class="volcom-com 3" src="img/rollover-cutouts/volcom-com/3.png">
+        
+          <img class="volcom-com 4" src="img/rollover-cutouts/volcom-com/4.png">
+        
+          <img class="volcom-com 5" src="img/rollover-cutouts/volcom-com/5.png">
+        
+          <img class="volcom-com 6" src="img/rollover-cutouts/volcom-com/6.png">
+        
+          <img class="nike-snowboarding 1" src="img/rollover-cutouts/nike-snowboarding/1.png">
+        
+          <img class="nike-snowboarding 2" src="img/rollover-cutouts/nike-snowboarding/2.png">
+        
+          <img class="nike-skateboarding 1" src="img/rollover-cutouts/nike-skateboarding/1.png">
+        
+          <img class="lebron-james-raven 1" src="img/rollover-cutouts/lebron-james-raven/1.png">
+        
+          <img class="lebron-james-raven 2" src="img/rollover-cutouts/lebron-james-raven/2.png">
+        
+          <img class="lebron-james-raven 3" src="img/rollover-cutouts/lebron-james-raven/3.png">
+        
+          <img class="lebron-james-raven 4" src="img/rollover-cutouts/lebron-james-raven/4.png">
+        
+          <img class="lebron-james-raven 5" src="img/rollover-cutouts/lebron-james-raven/5.png">
+        
+          <img class="lebron-james-raven 6" src="img/rollover-cutouts/lebron-james-raven/6.png">
+        
+          <img class="nike-b-access 1" src="img/rollover-cutouts/nike-b-access/1.png">
+        
+          <img class="nike-b-access 2" src="img/rollover-cutouts/nike-b-access/2.png">
+        
+          <img class="skol-com-br 1" src="img/rollover-cutouts/skol-com-br/1.png">
+        
+          <img class="skol-com-br 2" src="img/rollover-cutouts/skol-com-br/2.png">
+        
+          <img class="skol-com-br 3" src="img/rollover-cutouts/skol-com-br/3.png">
+        
+          <img class="skol-com-br 4" src="img/rollover-cutouts/skol-com-br/4.png">
+        
+          <img class="skol-com-br 5" src="img/rollover-cutouts/skol-com-br/5.png">
+        
+          <img class="skol-com-br 6" src="img/rollover-cutouts/skol-com-br/6.png">
+        
+          <img class="skol-com-br 7" src="img/rollover-cutouts/skol-com-br/7.png">
+        
+          <img class="nixon-blog 1" src="img/rollover-cutouts/nixon-blog/1.png">
+        
+          <img class="volcom-brain-damage 1" src="img/rollover-cutouts/volcom-brain-damage/1.png">
+        
+          <img class="volcom-brain-damage 2" src="img/rollover-cutouts/volcom-brain-damage/2.png">
+        
+          <img class="volcom-brain-damage 3" src="img/rollover-cutouts/volcom-brain-damage/3.png">
+      
+    </div>
+
+</body>
+</html>

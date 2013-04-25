@@ -1,7 +1,8 @@
 ---
-layout: project
+layout: project2
 title: The Love Project
-rollover_img: 
+post_id: the-love-project
+rollover_count: 5
 ---
 
 <div class="project-page">

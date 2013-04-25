@@ -2,55 +2,106 @@
 layout: default
 title: TK
 ---
-<div class="about-page">
-
-<p>Interview by Computer Arts UK Magazine:</p>
-
-<p>Art director and designer Augusto Paiva has already enjoyed a sparkling design career and boasts
-a string of huge clients in his portfolio, including Nike, Adidas, Honda, MTV and Microsoft. It’s not surprising, considering the breadth of his qualifications, which include a degree in advertising from Brazil as well as a degree in graphic design from Australia. He’s now based in New York, where he spends his time working on projects for Nike at digital advertising agency R/GA and skateboarding around his Brooklyn neighbourhood.</p>
-
-<p>Paiva’s work is heavily influenced by communication: "I’m inspired by things that provide people with the opportunity to interact," he explains. "I like to infuse my designs with a vibrancy that draws people in and makes them want to know more."</p>
-
-<p>He takes a fresh and bold approach, covering all disciplines from film-style frames to heavy digital platforms. "I like to take an ordinary subject, and develop a new and unique way to look at it,".</p>
-
-<p>"I guess my approach is often bold and not safe."</p>
-
-
-<p class="strong">Available for select worldwide projects.</p>
-
-<div class="connect-links"><a href="#">Linkedin</a>  ’  <a href="#">Twitter</a>  ’  <a href="#">Email</a></div>
-
-</div>
 <div class="content">
-  <div class="project-list-wrapper clearfix">
-    <!-- not DRY ... but the best i can do to create 2 cols with liquid templates -->
-    <ul class="project-list clearfix left-col">
-      {% for post in site.posts %}
-        {% if {{forloop.index}} < 8 %}
-          <li class="">
-            <a href="{{ post.url }}">{{ post.title }}
-              <div class="project-rollover-wrapper">
-                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-              </div>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    <ul class="project-list clearfix right-col">
-      {% for post in site.posts %}
-        {% if {{forloop.index}} > 7 %}
-          <li class="">
-            <a href="{{ post.url }}">{{ post.title }}
-              <div class="project-rollover-wrapper">
-                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-                <img class="project-rollover-img" src="img/{{ post.rollover_img }}"/>
-              </div>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+  <div class="top-section">
+    <div class="about-page">   
+      <div class="about-content">
+        <p>Interview by Computer Arts UK Magazine:</p>
+
+        <p>Art director and designer Augusto Paiva has already enjoyed a sparkling design career and boasts
+        a string of huge clients in his portfolio, including Nike, Adidas, Honda, MTV and Microsoft. It’s not surprising, considering the breadth of his qualifications, which include a degree in advertising from Brazil as well as a degree in graphic design from Australia. He’s now based in New York, where he spends his time working on projects for Nike at digital advertising agency R/GA and skateboarding around his Brooklyn neighbourhood.</p>
+
+        <p>Paiva’s work is heavily influenced by communication: "I’m inspired by things that provide people with the opportunity to interact," he explains. "I like to infuse my designs with a vibrancy that draws people in and makes them want to know more."</p>
+
+        <p>He takes a fresh and bold approach, covering all disciplines from film-style frames to heavy digital platforms. "I like to take an ordinary subject, and develop a new and unique way to look at it,".</p>
+
+        <p>"I guess my approach is often bold and not safe."</p>
+
+        <p class="strong">Available for select worldwide projects.</p>
+
+        <div class="connect-links"><a href="#">Linkedin</a>  ’  <a href="#">Twitter</a>  ’  <a href="#">Email</a></div>
+      </div>
+
+      <div class="bg"></div>
+    </div>
+
+    <!-- <canvas id="myCanvas" width="1000" height="400"></canvas> -->
+    <script>
+      // var images = {};
+
+      // function loadImages(sources, callback) {
+      //   var loadedImages = 0;
+      //   var numImages = 0;
+      //   for(var src in sources) {
+      //     numImages++;
+      //     images[src] = new Image();
+      //     images[src].onload = function() {
+      //       if(++loadedImages >= numImages) {
+      //         callback(images);
+      //       }
+      //     };
+      //     images[src].src = sources[src];
+      //   }
+      // }
+      // var canvas = document.getElementById('myCanvas');
+      // var context = canvas.getContext('2d');
+
+      // var sources = {
+      //   snow1: 'http://localhost:4000/img/rollover-cutouts/nike-snowboarding/1.png',
+      //   snow2: 'http://localhost:4000/img/rollover-cutouts/nike-snowboarding/2.png',
+      //   volcom1: 'http://localhost:4000/img/rollover-cutouts/volcom-com/5.png',
+      //   volcom2: 'http://localhost:4000/img/rollover-cutouts/volcom-com/6.png'
+      // };
+
+      // loadImages(sources, function(images) {
+      //   // context.drawImage(images.darthVader, 100, 30, 1000, 1000);
+      //   // context.drawImage(images.yoda, 350, 55, 1000, 1000);
+      // });
+
+      // function drawImage(imageIndex){
+      //   console.log(images);
+      // }
+
+    </script>
+
+
+    <div class="project-list-wrapper clearfix">
+      <!-- not DRY ... but the best i can do to create 2 cols with liquid templates -->
+      <ul class="project-list clearfix left-col">
+        {% for post in site.posts %}
+          {% if {{forloop.index}} < 8 %}
+            <li class="">
+              <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul class="project-list clearfix right-col">
+        {% for post in site.posts %}
+          {% if {{forloop.index}} > 7 %}
+            <li class="">
+              <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <div class="rollover-imgs">
+        {% for post in site.posts %}
+          {% for i in (1..1) %}
+            <div class="rollover-img {{ post.post_id }} {{ i }}" style="background-image:url(img/rollover-cutouts/{{ post.post_id }}/{{ i }}.png)"></div>
+            <!-- <img class="{{ post.post_id }} {{ i }}" style="margin-left:{{ i }}{{ i }}px" src="img/rollover-cutouts/volcom-com/1.png"/> -->
+          {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="blue-anim-section">
   </div>
 </div>
+  <div class="bottom-section">
+    <div id="project-page">
+      
+    </div>
+  </div>
