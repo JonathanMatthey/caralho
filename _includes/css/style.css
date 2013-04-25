@@ -549,8 +549,19 @@ footer .connect .connect-links a{
   position: absolute;
   top:0;
   left:0;
+  -webkit-transition: opacity 300ms linear;
+  -moz-transition: opacity 300ms linear;
+  -o-transition: opacity 300ms linear;
+  transition: opacity 300ms linear;
 }
 
+.project-list-wrapper:hover .right-col a{
+  opacity: 0.05;
+}
+
+.project-list a:hover{
+  opacity: 1;
+}
 .project-page{
   text-align: center;
   background-color: white;
