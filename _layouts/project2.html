@@ -41,20 +41,20 @@
     <a class="prev-link">
       <div class="preview"><img src="/img/animated-gifs/{{ page.next.post_id }}.gif"/></div>
       <div class="arrow"></div>
-    </a> 
+    </a>
 
     <a class="next-link">
       <div class="preview"><img src="/img/animated-gifs/{{ page.next.post_id }}.gif"/></div>
       <div class="arrow"></div>
-    </a> 
+    </a>
     <div id="projectmain" role="main">
 
       {{ content }}
 
-      <input class="prev-project-url" type='hidden' value='/#/{{ page.previous.url }}'></input>
-      <input class="next-project-url" type='hidden' value='/#/{{ page.next.url }}'></input>
-      <input class="prev-anim-gif-src" type='hidden' value='/img/animated-gifs/{{ page.previous.post_id }}.gif'></input>
-      <input class="next-anim-gif-src" type='hidden' value='/img/animated-gifs/{{ page.next.post_id }}.gif'></input>
+      <input class="prev-project-url" type='hidden' value='/#/{{ page.next.url }}'></input>
+      <input class="next-project-url" type='hidden' value='/#/{{ page.previous.url }}'></input>
+      <input class="prev-anim-gif-src" type='hidden' value='/img/animated-gifs/{{ page.next.post_id }}.gif'></input>
+      <input class="next-anim-gif-src" type='hidden' value='/img/animated-gifs/{{ page.previous.post_id }}.gif'></input>
 
       <div class="project-nav">
           <div class="project-link-label">Next project</div>
@@ -102,6 +102,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
     <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
-  
+
 </body>
 </html>

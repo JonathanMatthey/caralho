@@ -9,9 +9,20 @@ rollover_count: 1
 
 <div class="project-details clearfix">
 
+
   <div class="project-index-wrapper">
     <div class="project-index">
-      07
+      <div class="pi01">01</div>
+      <div class="pi02">02</div>
+      <div class="pi03">03</div>
+      <div class="pi04">04</div>
+      <div class="pi05">05</div>
+      <div class="pi06">06</div>
+      <div class="pi07">07</div>
+      <div class="pi08">08</div>
+      <div class="pi09">09</div>
+      <div class="pi10">10</div>
+      <div class="index">11</div>
     </div>
     <div class="project-total-count">
       /12 {{ site.total_posts}}

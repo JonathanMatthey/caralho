@@ -52,8 +52,6 @@ $(document).ready(function(){
       var stateName = state.substr(1,state.length);
       showProjectView(state);
     }
-
-    // $("." + stateName + "-page").addClass('slide-in');
   });
 
   // Bind a handler for root state
@@ -94,6 +92,7 @@ $(document).ready(function(){
     if (direction == "up"){
       $allwaves.css('top',-winH);
 
+      $allwaves.css('height',winH * 1.5).css('width',winW);
       $wrapper.animate({top: winH}, dur, finalEase, function(){
       });
 
@@ -106,13 +105,13 @@ $(document).ready(function(){
       delay += inc*2;
       $.doTimeout(delay, function(){
         $wave3.animate({top: winH}, dur, finalEase);
-        $preroll.animate({top: $win.height()}, dur, ease);
+        $preroll.animate({"margin-top": -$win.height()}, dur, ease);
       });
     }
     else{
       $allwaves.css('top',winH);
 
-      $preroll.animate({top: -$win.height()}, dur, ease);
+      $preroll.animate({"margin-top": -$win.height()*2}, dur, ease);
 
       delay += inc;
       $.doTimeout(delay, function(){ $wave3.animate({top: -winH}, dur, ease); });
@@ -164,8 +163,6 @@ $(document).ready(function(){
     evt.preventDefault();
     var projectUrl = $(evt.currentTarget).attr('href');
     projectUrl = projectUrl.replace('/#/caralho','');
-    console.log('projectUrl - line 60');
-    console.log(projectUrl);
     $.History.go(projectUrl);
   });
 
@@ -220,11 +217,15 @@ $(document).ready(function(){
     $("#main").addClass('bottom-section-view');
     var projectUrl = '/caralho' + projectUrl;
     console.log(projectUrl);
-    $("#project-page").load( projectUrl + " #projectmain", function(){
-      // $("#main").addClass('project-view');
-      bindProjectPageEvents();
-      loadPrevNextAnimGif();
-    });
+    $("#project-page").fadeOut(200,function(){
+      $("#project-page").load( projectUrl + " #projectmain", function(){
+        // $("#main").addClass('project-view');
+        bindProjectPageEvents();
+        loadPrevNextAnimGif();
+        $("#project-page").fadeIn(200,function(){
+        });
+      });
+    })
   }
 
   function loadPrevNextAnimGif(){

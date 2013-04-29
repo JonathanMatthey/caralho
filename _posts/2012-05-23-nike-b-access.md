@@ -9,14 +9,24 @@ rollover_count: 2
 
 <div class="project-details clearfix">
 
+
   <div class="project-index-wrapper">
     <div class="project-index">
-      07
+      <div class="pi01">01</div>
+      <div class="pi02">02</div>
+      <div class="pi03">03</div>
+      <div class="pi04">04</div>
+      <div class="pi05">05</div>
+      <div class="pi06">06</div>
+      <div class="pi07">07</div>
+      <div class="pi08">08</div>
+      <div class="index">09</div>
     </div>
     <div class="project-total-count">
       /12 {{ site.total_posts}}
     </div>
   </div>
+
 
   <h1>Lebron James: Raven</h1>
   <p>A huge migration and big step for the core snowboarding world. The new global, E-Comm enabled NikeSnowboarding.com couples the powerful imagery and attitude of the snowboarding world with the rest of Nike's brands, united.</p>
