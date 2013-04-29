@@ -3,8 +3,8 @@ layout: default
 title: TK
 ---
 <div class="content">
-  <div class="top-section">
-    <div class="about-page">   
+  <div id="top-section">
+    <div id="about-page">
       <div class="about-content">
         <p>Interview by Computer Arts UK Magazine:</p>
 
@@ -25,83 +25,122 @@ title: TK
       <div class="bg"></div>
     </div>
 
-    <!-- <canvas id="myCanvas" width="1000" height="400"></canvas> -->
-    <script>
-      // var images = {};
-
-      // function loadImages(sources, callback) {
-      //   var loadedImages = 0;
-      //   var numImages = 0;
-      //   for(var src in sources) {
-      //     numImages++;
-      //     images[src] = new Image();
-      //     images[src].onload = function() {
-      //       if(++loadedImages >= numImages) {
-      //         callback(images);
-      //       }
-      //     };
-      //     images[src].src = sources[src];
-      //   }
-      // }
-      // var canvas = document.getElementById('myCanvas');
-      // var context = canvas.getContext('2d');
-
-      // var sources = {
-      //   snow1: 'http://localhost:4000/img/rollover-cutouts/nike-snowboarding/1.png',
-      //   snow2: 'http://localhost:4000/img/rollover-cutouts/nike-snowboarding/2.png',
-      //   volcom1: 'http://localhost:4000/img/rollover-cutouts/volcom-com/5.png',
-      //   volcom2: 'http://localhost:4000/img/rollover-cutouts/volcom-com/6.png'
-      // };
-
-      // loadImages(sources, function(images) {
-      //   // context.drawImage(images.darthVader, 100, 30, 1000, 1000);
-      //   // context.drawImage(images.yoda, 350, 55, 1000, 1000);
-      // });
-
-      // function drawImage(imageIndex){
-      //   console.log(images);
-      // }
-
-    </script>
-
-
-    <div class="project-list-wrapper clearfix">
-      <!-- not DRY ... but the best i can do to create 2 cols with liquid templates -->
-      <ul class="project-list clearfix left-col">
-        {% for post in site.posts %}
-          {% if {{forloop.index}} < 8 %}
-            <li class="">
-              <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <ul class="project-list clearfix right-col">
-        {% for post in site.posts %}
-          {% if {{forloop.index}} > 7 %}
-            <li class="">
-              <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-      <div class="rollover-imgs">
-        {% for post in site.posts %}
-          {% for i in (1..1) %}
-            <div class="rollover-img {{ post.post_id }} {{ i }}" style="background-image:url(img/rollover-cutouts/{{ post.post_id }}/{{ i }}.png)"></div>
-            <!-- <img class="{{ post.post_id }} {{ i }}" style="margin-left:{{ i }}{{ i }}px" src="img/rollover-cutouts/volcom-com/1.png"/> -->
+    <div id="home-page">
+      <div class="project-list-wrapper clearfix">
+        <!-- not DRY ... but the best i can do to create 2 cols with liquid templates -->
+        <ul class="project-list clearfix left-col">
+          {% for post in site.posts %}
+            {% if {{forloop.index}} < 8 %}
+              <li class="">
+                <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
-        {% endfor %}
+        </ul>
+        <ul class="project-list clearfix right-col">
+          {% for post in site.posts %}
+            {% if {{forloop.index}} > 7 %}
+              <li class="">
+                <a class="{{ post.post_id }}" href="/#/{{ post.url }}">{{ post.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <div class="rollover-imgs">
+<!--           {% for post in site.posts %}
+            {% for i in (1..1) %}
+              <div class="rollover-img {{ post.post_id }} {{ i }}" style="background-image:url(img/rollover-cutouts/{{ post.post_id }}/{{ i }}.png)"></div>
+               <img class="{{ post.post_id }} {{ i }}" style="margin-left:{{ i }}{{ i }}px" src="img/rollover-cutouts/volcom-com/1.png"/>
+            {% endfor %}
+          {% endfor %} -->
+           <div class="nike-com">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="nike-store">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="leica-photo-contest">
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="the-love-project">
+            <div></div>
+           </div>
+
+           <div class="honda-access">
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="honda-com-br">
+            <div></div>
+           </div>
+
+           <div class="volcom-com">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="nike-snowboarding">
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="nike-skateboarding">
+            <div></div>
+           </div>
+
+           <div class="lebron-james-raven">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="nike-b-access">
+            <div></div>
+            <div></div>
+           </div>
+
+           <div class="skol-com-br">
+            <div></div>
+           </div>
+
+           <div class="nixon-blog">
+            <div></div>
+           </div>
+
+           <div class="volcom-brain-damage">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+           </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="blue-anim-section">
-  </div>
-</div>
-  <div class="bottom-section">
+  <div id="wave1" class="wave"></div>
+  <div id="wave2" class="wave"><div class="pattern"></div></div>
+  <div id="wave3" class="wave"></div>
+  <div id="bottom-section">
     <div id="project-page">
-      
+
     </div>
   </div>
+</div>

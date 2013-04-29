@@ -1,3 +1,27 @@
+
+
+// ****************************************
+// **************** TODO ******************
+//
+// - finish top to bottom 3 layers animation
+// - make browsing directly to project work
+// - slide transitions between projects
+// - bottom of project slide up
+// - animated gifs
+// - hosting and server setup ( github pages ? )
+// - 1024px 1440px ipad / iphone resolutions.
+//
+// ****************************************
+
+// SUNDAY SCHEDULE
+// - finish 3 points of CARAHLO
+// - Clean room
+// 6pm
+// - finish 3 points of CARAHLO
+// - minbox
+// 10pm - Smoke !
+
+
 $(document).ready(function(){
 
   var scrolledToBottom = false;
@@ -12,9 +36,9 @@ $(document).ready(function(){
   // });
 
   $(window).resize(function() {
-    var aboutPageHeight = $(window).height() - parseInt($(".about-page").css('padding-top'),10);
-    $(".about-page").css('height', aboutPageHeight);
-    $("#main").css('margin-top','-' + $(window).height() +'px');
+    var aboutPageHeight = $(window).height() - parseInt($("#about-page").css('padding-top'),10);
+    $("#about-page").css('height', aboutPageHeight);
+    $("#top-section").css('margin-top','-' + $(window).height() +'px');
   });
   $(window).resize();
 
@@ -22,9 +46,7 @@ $(document).ready(function(){
   $.History.bind(function(state){
     // Update the current element to indicate which state we are now on
     // Update the page's title with our current state on the end
-
     console.log(state);
-
     // check if not on about or / routes
     if (window.location.href.indexOf("about") == -1 && (window.location.href.indexOf("/#/") != (window.location.href.length-3))){
       var stateName = state.substr(1,state.length);
@@ -37,7 +59,7 @@ $(document).ready(function(){
   // Bind a handler for root state
   $.History.bind('/',function(state){
     $("html").addClass('noscroll');
-    $("#main").addClass('home-view');
+    // $("#main").addClass('home-view');
   });
 
   // Bind a handler for state: bananas
@@ -47,14 +69,68 @@ $(document).ready(function(){
     $("#about-link").attr('href','/');
   });
 
-  // $(".project-list a").eq(1).mouseenter(function(evt){
-  //   console.log('mouseenter');
-  //   evt.preventDefault();
-  //   t = $(evt.currentTarget);
-  //   $(".rollover-imgs ." + t.attr('class')).addClass('active');
-  //   // context.drawImage(images.snow1, 100, 30, 1000, 1000);
-  //   // context.drawImage(images.snow2, 100, 30, 1000, 1000);
-  // });
+  $win = $(window);
+
+  function playThreeWaveAnimation(direction){
+
+    $wave1 = $("#wave1"),
+    $wave2 = $("#wave2"),
+    $wave3 = $("#wave3"),
+    $allwaves = $('.wave');
+
+    $preroll = $("#top-section");
+    $wrapper = $("#bottom-section");
+
+    var inc = 300,
+        dur = 800,
+        delay = 0,
+        winH = $win.height(),
+        winW = $win.width(),
+        ease = 'easeInExpo',
+        finalEase = 'easeInOutExpo';
+
+    $allwaves.css('height',winH*2).css('width',winW);
+
+    if (direction == "up"){
+      $allwaves.css('top',-winH);
+
+      $wrapper.animate({top: winH}, dur, finalEase, function(){
+      });
+
+      delay += inc;
+      $.doTimeout(delay, function(){ $wave1.animate({top: winH}, dur, ease); });
+
+      delay += inc;
+      $.doTimeout(delay, function(){ $wave2.animate({top: winH}, dur, ease); });
+
+      delay += inc*2;
+      $.doTimeout(delay, function(){
+        $wave3.animate({top: winH}, dur, finalEase);
+        $preroll.animate({top: $win.height()}, dur, ease);
+      });
+    }
+    else{
+      $allwaves.css('top',winH);
+
+      $preroll.animate({top: -$win.height()}, dur, ease);
+
+      delay += inc;
+      $.doTimeout(delay, function(){ $wave3.animate({top: -winH}, dur, ease); });
+
+      delay += inc;
+      $.doTimeout(delay, function(){ $wave2.animate({top: -winH}, dur, ease); });
+
+      delay += inc*2;
+      $.doTimeout(delay, function(){
+        $wave1.animate({top: -winH}, dur, finalEase);
+        $wrapper.css({top: winH}).animate({top: 0}, dur, finalEase, function(){
+          // $entry.detach();
+          // $wrapper.css({overflow: 'auto', height:'auto', position: 'static'});
+        });
+      });
+    }
+
+  }
 
   $(".project-list a").mouseenter(function(evt){
     console.log('mouseenter');
@@ -76,11 +152,14 @@ $(document).ready(function(){
     evt.preventDefault();
     var projectUrl = $(evt.currentTarget).attr('href');
     projectUrl = projectUrl.replace('/#/caralho','');
-    console.log('projectUrl - line 60');
-    console.log(projectUrl);
-    $("#main").addClass('bottom-wave-anim');
+    // $("#wave1,#wave2,#wave3").addClass('play');
+    // $("#top-section,#bottom-section").addClass('slide-up');
+    playThreeWaveAnimation('down');
+
+    // $("#main").addClass('bottom-wave-anim');
     $.History.go(projectUrl);
   });
+
   $(".prev-link,.next-link").click(function(evt){
     evt.preventDefault();
     var projectUrl = $(evt.currentTarget).attr('href');
@@ -90,31 +169,50 @@ $(document).ready(function(){
     $.History.go(projectUrl);
   });
 
-  $(".about").click(function(evt){
+  $("#plus-menu a").click(function(evt){
     evt.preventDefault();
+
     if ( $(document).scrollTop() > 10 ){
       $('html, body').animate({
         scrollTop: 0
       }, 1000, function(){
-        showAboutView();
+        playThreeWaveAnimation('up');
       });
     }
     else {
-      showAboutView();
+      if ($("#main.bottom-section-view").length > 0){
+        playThreeWaveAnimation('up');
+      }
+      else{
+        slideUp();
+      }
     }
   });
 
-  function showHomeView(){
-    $("#main").addClass('home-view about-slide-transition');
-    $("#main").removeClass('bottom-section-view about-view');
-    $.History.go('/');
-  }
+  // function playThreeWaveAnimation(){
+  //   // at bottom of portfolio - wave up !
+  //   if ($("#main.bottom-section-view").length > 0){
+  //     playThreeWaveAnimation();
+  //   }
+  //   else{
+  //     $("#main").addClass('home-view about-slide-transition');
+  //     $("#main").removeClass('bottom-section-view about-view');
+  //   }
+  //   $.History.go('/about');
+  //   $.History.go('/');
+  // }
 
-  function showAboutView(){
-    $("#main").addClass('about-view about-slide-transition');
-    $("#main").removeClass('bottom-section-view home-view');
-    $.History.go('/about');
-  }
+  // function showAboutView(){
+  //   // at bottom of portfolio - wave up !
+  //   if ($("#main.bottom-section-view").length > 0){
+  //     playThreeWaveAnimation();
+  //   }
+  //   else{
+  //     $("#main").addClass('about-view about-slide-transition');
+  //     $("#main").removeClass('bottom-section-view home-view');
+  //   }
+  //   $.History.go('/about');
+  // }
 
   function showProjectView(projectUrl){
     // $("#main").addClass('project-view');
@@ -136,20 +234,6 @@ $(document).ready(function(){
     $(".prev-link").attr('href',$(".prev-project-url").val());
     $(".next-link").attr('href',$(".next-project-url").val());
   }
-
-  $(".all-work").click(function(evt){
-    evt.preventDefault();
-    if ( $(document).scrollTop() > 10 ){
-      $('html, body').animate({
-        scrollTop: 0
-      }, 1000, function(){
-        showHomeView();
-      });
-    }
-    else {
-        showHomeView();
-    }
-  });
 
   var windowHeight = $(window).height();
   var docHeight = $(document).height();

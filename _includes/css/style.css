@@ -97,81 +97,75 @@ header h1{
   opacity: 1;
 }
 
-.top-section{
+#top-section{
   margin-top:0px;
+  width: 100%;
 }
 
-.blue-anim-section{
-  height:800px;
-  margin-top:400px;
-  background-color:#31b984;
-}
-
-.bottom-section{
-  position: absolute;
-  top:2100px;
+#bottom-section{
   width:100%;
   height:3000px;
   background-color:white;
+  top:1000px;
 }
 
-#main.bottom-wave-anim .bottom-section-view{
-  -webkit-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) ;
-  -moz-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) ;
-  -o-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) ;
-  transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) ;
+.wave{
+  position: absolute;
 }
 
-#main.bottom-wave-anim .blue-anim-section{
-  -webkit-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) 200ms;
-  -moz-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) 200ms;
-  -o-transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) 200ms;
-  transition: margin-top 1200ms   cubic-bezier(0.685, 0.000, 0.920, 0.115) 200ms;
+#wave1{
+  background-color: #000;
+  z-index: 552;
+}
+#wave2{
+  z-index: 551;
+}
+#wave3{
+  background-color: #111;
+  z-index: 550;
+}
+#bottom-section{
+  background-color: #111;
+  z-index: 555;
+}
+.wave .pattern{
+  background-color:#31b984;
+  width:100%;
+  height:100%;
+  background-image: url(../img/transition_02.gif);
 }
 
-#main.bottom-wave-anim .bottom-section{
-  -webkit-transition: top 1200ms cubic-bezier(0.685, 0.000, 0.920, 0.115) 500ms;
-  -moz-transition: top 1200ms cubic-bezier(0.685, 0.000, 0.920, 0.115) 500ms;
-  -o-transition: top 1200ms cubic-bezier(0.685, 0.000, 0.920, 0.115) 500ms;
-  transition: top 1200ms cubic-bezier(0.685, 0.000, 0.920, 0.115) 500ms;
+#wave1,#wave2,#wave3{
+  width:100%;
+  position: absolute;
 }
+
 
 #main.bottom-section-view{
   opacity: 1;
 }
 
-#main.bottom-section-view .top-section{
-  margin-top:-1000px;
-}
-#main.bottom-section-view .blue-anim-section{
-  margin-top:-1000px;
-}
-#main.bottom-section-view .bottom-section{
-  top:1000px;
+#top-section, #bottom-section{
+  position: absolute;
 }
 
 #main{
-  margin-top:-1000px;
-  -webkit-transition:opacity 200ms ease-out;
-  -moz-transition:opacity 200ms ease-out;
-  -o-transition:opacity 200ms ease-out;
-  transition:opacity 200ms ease-out;
 }
 
 #main.home-view{
   opacity: 1;
 }
 
-#main.about-view{
+#main.about-view #top-section{
   margin-top:0px!important;
   opacity: 1;
 }
 
-#main.about-slide-transition{
-  -webkit-transition: margin-top 600ms ease-out;
-  -moz-transition: margin-top 600ms ease-out;
-  -o-transition: margin-top 600ms ease-out;
-  transition: margin-top 600ms ease-out;
+#main.about-slide-transition #top-section{
+  -webkit-transition: margin-top 300ms ease-out;
+  -moz-transition: margin-top 300ms ease-out;
+  -o-transition: margin-top 300ms ease-out;
+  transition: margin-top 300ms ease-out;
 }
 
 #main.about-view .bg{
@@ -195,7 +189,7 @@ header h1{
 
 
 #main.project-view{
-  margin-top:-2000px;
+  /*margin-top:-2000px;*/
 }
 
 #main.project-view .project-list{
@@ -220,7 +214,6 @@ header h1{
 }
 .prev-link .preview,
 .next-link .preview{
-  background-image: url(../img/left-arrow-preview.jpg);
   width:200px;
   height:123px;
   opacity: 0;
@@ -230,17 +223,26 @@ header h1{
   transition: opacity 100ms linear;
 }
 
-.next-text,
-.prev-text{
+.next-text, .prev-text {
   position: absolute;
   bottom: 0;
   background-color: rgba(0,0,0,0.8);
-  width: 131px;
+  width: 74px;
   text-align: center;
-  font-size: 16px;
-  padding: 7px;
-  text-transform: uppercase;
-  font-family: helvetica;
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica;
+  text-transform: capitalize;
+  padding: 9px;
+  margin-left: 54px;
+  margin-bottom: 1px;
+  line-height: 16px;
+}
+
+
+.prev-text {
+  width: 95px;
+  margin-left: auto;
+  margin-right: 32px;
 }
 
 .next-text{
@@ -249,13 +251,14 @@ header h1{
 .prev-text{
   right:0;
 }
-.next-link .preview{
-  background-image: url(../img/right-arrow-preview.jpg);
-}
 
 .next-link:hover .preview,
 .prev-link:hover .preview{
   opacity: 1;
+}
+.next-link:hover .arrow,
+.prev-link:hover .arrow{
+  opacity: 0.8;
 }
 
 .next-link .arrow,
@@ -320,6 +323,7 @@ header h1{
 
 .twitter-share-button{
   width:80px!important;
+  height:23px!important;
 }
 
 a{
@@ -347,7 +351,11 @@ ul{
   list-style: none;
 }
 
-.about-page{
+#home-page{
+  position: relative;
+}
+
+#about-page{
   padding-left:50px;
   background-color:#1c1c1c;
   position: relative;
@@ -355,10 +363,10 @@ ul{
   width:100%;
   background-repeat: no-repeat;
   padding-top:160px;
-
+  overflow: hidden;
 }
 
-.about-page .bg{
+#about-page .bg{
   background: #1c1c1c url(../img/augusto-paiva-bg.jpg)  no-repeat fixed right;
   background-size: auto 100% ;
   position: absolute;
@@ -370,32 +378,32 @@ ul{
   opacity: 0;
 }
 
-.about-page .about-content{
+#about-page .about-content{
   position: absolute;
   z-index: 11;
 }
 
-.about-page p{
+#about-page p{
   width:870px;
 }
 
-.about-page p.strong{
+#about-page p.strong{
   color:white;
   margin-top:50px;
   margin-bottom:40px;
 }
 
 
-.about-page .connect-links{
+#about-page .connect-links{
   font-size:35px;
 }
 
-.about-page .connect-links a{
+#about-page .connect-links a{
   font-size:35px;
   font-weight:bold;
 }
 
-.about-page.slide-in{
+#about-page.slide-in{
   top:40px;
 }
 
@@ -555,11 +563,11 @@ footer .connect .connect-links a{
   transition: opacity 300ms linear;
 }
 
-.project-list-wrapper:hover .right-col a{
+.project-list-wrapper:hover a{
   opacity: 0.05;
 }
 
-.project-list a:hover{
+.project-list-wrapper:hover a:hover{
   opacity: 1;
 }
 .project-page{
@@ -662,24 +670,177 @@ footer .connect .connect-links a{
   z-index: 1;
 }
 
-.rollover-imgs > .rollover-img{
-  position: absolute;
-  top:0;
-  left:0;
-  z-index: 1;
-  opacity: 0;
+.rollover-imgs > div,
+.rollover-imgs > div > div{
   width:100%;
   height:100%;
-  background-size: 100% auto;
-  background-position: center center;
-/*  -webkit-transition: opacity 300ms linear;
-  -moz-transition: opacity 300ms linear;
-  -o-transition: opacity 300ms linear;
-  transition: opacity 300ms linear;*/
+  position: absolute;
+  background-repeat: no-repeat;
 }
-.rollover-imgs > .active{
+
+.rollover-imgs > div > div{
+  opacity: 0;
+}
+
+.rollover-imgs > div.active > div{
   opacity: 1;
 }
+
+
+.rollover-imgs > .nike-com > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/nike_com/nike_com_01.jpg);
+}
+
+.rollover-imgs > .nike-com > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/nike_com/nike_com_02.png);
+}
+
+.rollover-imgs > .nike-com > div:nth-child(3){
+  background-image: url(../img/rollover-cutouts/nike_com/nike_com_03.jpg);
+}
+
+.rollover-imgs > .nike-com > div:nth-child(4){
+  background-image: url(../img/rollover-cutouts/nike_com/nike_com_04.jpg);
+}
+
+.rollover-imgs > .nike-store > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/nike_store/nikestore_01.jpg);
+}
+
+.rollover-imgs > .nike-store > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/nike_store/nikestore_02.png);
+}
+
+.rollover-imgs > .nike-store > div:nth-child(3){
+  background-image: url(../img/rollover-cutouts/nike_store/nikestore_03.png);
+}
+
+.rollover-imgs > .nike-store > div:nth-child(4){
+  background-image: url(../img/rollover-cutouts/nike_store/nikestore_04.png);
+}
+
+.rollover-imgs > .leica-photo-contest > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/leica/leica_01.jpg);
+}
+
+.rollover-imgs > .leica-photo-contest > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/leica/leica_02.jpg);
+}
+
+.rollover-imgs > .the-love-project > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/theloveproject/theloveproject_01.jpg);
+  background-position: top right;
+}
+
+.rollover-imgs > .honda-access > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/honda_access/hondaaccess_02.jpg);
+  background-position: right 11%;
+}
+
+.rollover-imgs > .honda-access > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/honda_access/hondaaccess_01.jpg);
+  background-position: center right;
+}
+
+.rollover-imgs > .honda-com-br > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/honda/hond_01.jpg);
+}
+
+.rollover-imgs > .volcom-com > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_01.png);
+}
+
+.rollover-imgs > .volcom-com > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_02.png);
+}
+
+.rollover-imgs > .volcom-com > div:nth-child(3){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_03.png);
+}
+
+.rollover-imgs > .volcom-com > div:nth-child(4){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_04.jpg);
+}
+
+.rollover-imgs > .nike-snowboarding > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/snowboarding/snowboarding_02.jpg);
+  left:22%;
+  top:4%;
+}
+
+.rollover-imgs > .nike-snowboarding > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/snowboarding/snowboarding_01.png);
+}
+
+.rollover-imgs > .nike-skateboarding > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/skateboarding/skateboarding_01.jpg);
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/lebron/lebron_06.jpg);
+  left:20%;
+  top:50%;
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(2){
+
+  background-image: url(../img/rollover-cutouts/lebron/lebron_01.jpg);
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(3){
+
+  background-image: url(../img/rollover-cutouts/lebron/lebron_04.jpg);
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(4){
+
+  background-image: url(../img/rollover-cutouts/lebron/lebron_03.jpg);
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(5){
+
+  background-image: url(../img/rollover-cutouts/lebron/lebron_02.jpg);
+}
+
+.rollover-imgs > .lebron-james-raven > div:nth-child(6){
+
+  background-image: url(../img/rollover-cutouts/lebron/lebron_05.jpg);
+}
+
+.rollover-imgs > .nike-b-access > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/nike_basketball/nikebasketball_01.jpg);
+}
+
+.rollover-imgs > .nike-b-access > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/nike_basketball/nikebasketball_02.jpg);
+}
+
+.rollover-imgs > .skol-com-br > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/skol/skol_01.jpg);
+}
+
+.rollover-imgs > .nixon-blog > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/nixon/nixon_01.jpg);
+  left:10%;
+  top:13%;
+}
+
+.rollover-imgs > .volcom-brain-damage > div:nth-child(1){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_01.png);
+}
+
+.rollover-imgs > .volcom-brain-damage > div:nth-child(2){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_02.png);
+}
+
+.rollover-imgs > .volcom-brain-damage > div:nth-child(3){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_03.png);
+}
+
+.rollover-imgs > .volcom-brain-damage > div:nth-child(4){
+  background-image: url(../img/rollover-cutouts/volcom/volcom_05.jpg);
+}
+
 
 /*// TODO TO CLEAN UP THESE */
 
